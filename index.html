@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أوراق عمل الإنجليزي - الصف السادس</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .english-text {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .watermark {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.3;
+            font-size: 12px;
+            color: #8b5cf6;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            color: #e9d5ff;
+            font-size: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #8b5cf6, #a78bfa);
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #fce7f3 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+        }
+        
+        .btn-purple {
+            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-purple:hover {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            transform: scale(1.05);
+        }
+        
+        .btn-pink-purple {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-pink-purple:hover {
+            background: linear-gradient(135deg, #db2777, #7c3aed);
+            transform: scale(1.05);
+        }
+        
+        .admin-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 2px solid #e9d5ff;
+        }
+        
+        .unit-card {
+            background: linear-gradient(135deg, #ffffff, #faf5ff, #fce7f3);
+            border: 2px solid #e9d5ff;
+        }
+        
+        .exercise-item {
+            background: linear-gradient(90deg, #faf5ff, #ffffff, #fce7f3);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .login-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        .login-card {
+            background: linear-gradient(135deg, #ffffff, #faf5ff, #f3e8ff);
+            border: 3px solid #8b5cf6;
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.3);
+        }
+        
+        .security-section {
+            background: linear-gradient(135deg, #fef3c7, #fde68a, #e9d5ff);
+            border: 2px solid #f59e0b;
+        }
+        
+        .purple-accent {
+            color: #8b5cf6;
+        }
+        
+        .purple-bg {
+            background-color: #f3e8ff;
+        }
+        
+        .purple-border {
+            border-color: #8b5cf6;
+        }
+        
+        .pink-purple-gradient {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6, #a78bfa);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatAround 8s ease-in-out infinite;
+        }
+        
+        @keyframes floatAround {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -20px) rotate(90deg); }
+            50% { transform: translate(-10px, -30px) rotate(180deg); }
+            75% { transform: translate(-20px, 10px) rotate(270deg); }
+        }
+        
+        .debug-info {
+            background: #1f2937;
+            color: #10b981;
+            font-family: monospace;
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- العلامة المائية -->
+    <div class="watermark">© أسماء الحجيلي - 1447هـ</div>
+    
+    <!-- المؤثرات البصرية -->
+    <div class="floating-hearts">
+        <div class="heart" style="left: 10%; animation-delay: 0s;">💜</div>
+        <div class="heart" style="left: 20%; animation-delay: 1s;">✨</div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;">🌸</div>
+        <div class="heart" style="left: 40%; animation-delay: 3s;">💕</div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;">🦋</div>
+        <div class="heart" style="left: 60%; animation-delay: 5s;">💜</div>
+        <div class="heart" style="left: 70%; animation-delay: 1.5s;">✨</div>
+        <div class="heart" style="left: 80%; animation-delay: 2.5s;">🌸</div>
+        <div class="heart" style="left: 90%; animation-delay: 3.5s;">💕</div>
+    </div>
+    
+    <!-- عناصر عائمة إضافية -->
+    <div class="floating-elements">
+        <div class="floating-element text-6xl purple-accent" style="left: 15%; top: 20%; animation-delay: 0s;">🌟</div>
+        <div class="floating-element text-4xl purple-accent" style="left: 75%; top: 30%; animation-delay: 2s;">💎</div>
+        <div class="floating-element text-5xl purple-accent" style="left: 25%; top: 70%; animation-delay: 4s;">🎭</div>
+        <div class="floating-element text-3xl purple-accent" style="left: 85%; top: 80%; animation-delay: 6s;">🎨</div>
+    </div>
+    
+    <!-- شاشة تسجيل الدخول -->
+    <div id="loginOverlay" class="fixed inset-0 login-overlay flex items-center justify-center z-50">
+        <div class="login-card rounded-3xl p-8 max-w-md w-full mx-4 text-center">
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold purple-accent mb-2">🌸 مرحباً بك 🌸</h2>
+                <p class="text-gray-600">أدخلي بيانات الدخول للوصول إلى أوراق العمل</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-right purple-accent font-semibold mb-2">اسم المستخدم:</label>
+                    <input type="text" id="username" class="w-full p-3 border-2 border-purple-300 rounded-xl text-center english-text focus:border-purple-500" placeholder="Enter Username">
+                </div>
+                
+                <div>
+                    <label class="block text-right purple-accent font-semibold mb-2">كلمة المرور:</label>
+                    <input type="password" id="password" class="w-full p-3 border-2 border-purple-300 rounded-xl text-center english-text focus:border-purple-500" placeholder="Enter Password">
+                </div>
+                
+                <button onclick="login()" class="w-full btn-pink-purple text-white py-3 rounded-xl font-semibold text-lg">
+                    دخول 💜
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div id="mainContent" class="hidden">
+        <!-- الهيدر -->
+        <header class="bg-white/80 backdrop-blur-md shadow-lg border-b-4 border-purple-300">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="text-right">
+                        <h1 class="text-3xl font-bold purple-accent">🌸 أوراق عمل الإنجليزي 🌸</h1>
+                        <p class="text-gray-600">الصف السادس - الفصل الدراسي الأول - 1447هـ</p>
+                        <p class="text-sm text-purple-500 mt-1">إعداد: أسماء الحجيلي ✨</p>
+                    </div>
+                    <button onclick="toggleAdminPanel()" class="btn-purple text-white px-6 py-3 rounded-xl font-semibold">
+                        لوحة التحكم 🎛️
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- لوحة التحكم -->
+        <div id="adminPanel" class="hidden fixed top-20 left-6 admin-panel rounded-2xl p-6 shadow-2xl z-40 max-w-sm max-h-[80vh] overflow-y-auto">
+            <h3 class="text-xl font-bold purple-accent mb-4 text-center">🎛️ لوحة التحكم</h3>
+            
+            <div class="space-y-4">
+                <!-- قسم الأمان -->
+                <div class="security-section rounded-xl p-4">
+                    <h4 class="text-lg font-bold text-amber-700 mb-3 text-center">🔐 إعدادات الأمان</h4>
+                    
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-amber-700 font-semibold mb-2">اسم المستخدم الحالي:</label>
+                            <input type="text" id="currentUsername" class="w-full p-2 border-2 border-amber-300 rounded-lg english-text" placeholder="Current Username">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-amber-700 font-semibold mb-2">كلمة المرور الحالية:</label>
+                            <input type="password" id="currentPassword" class="w-full p-2 border-2 border-amber-300 rounded-lg english-text" placeholder="Current Password">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-amber-700 font-semibold mb-2">اسم المستخدم الجديد:</label>
+                            <input type="text" id="newUsername" class="w-full p-2 border-2 border-amber-300 rounded-lg english-text" placeholder="New Username">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-amber-700 font-semibold mb-2">كلمة المرور الجديدة:</label>
+                            <input type="password" id="newPassword" class="w-full p-2 border-2 border-amber-300 rounded-lg english-text" placeholder="New Password">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-amber-700 font-semibold mb-2">رقم سري لوحة التحكم الجديد:</label>
+                            <input type="password" id="newAdminCode" class="w-full p-2 border-2 border-amber-300 rounded-lg english-text" placeholder="New Admin Code">
+                        </div>
+                        
+                        <button onclick="showCurrentCredentials()" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 font-semibold mb-2">
+                            عرض البيانات الحالية 👁️
+                        </button>
+                        
+                        <button onclick="fillCurrentCredentials()" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 font-semibold mb-2">
+                            ملء البيانات الحالية تلقائياً ✨
+                        </button>
+                        
+                        <button onclick="changeCredentials()" class="w-full bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 font-semibold">
+                            تغيير بيانات الدخول 🔄
+                        </button>
+                        
+                        <!-- منطقة التشخيص -->
+                        <div id="debugArea" class="hidden">
+                            <h5 class="text-sm font-bold text-amber-700 mb-2">🔍 معلومات التشخيص:</h5>
+                            <div id="debugLog" class="debug-info"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم إدارة المحتوى -->
+                <div>
+                    <label class="block purple-accent font-semibold mb-2">إضافة وحدة جديدة:</label>
+                    <input type="text" id="newUnitTitle" class="w-full p-2 border-2 border-purple-300 rounded-lg" placeholder="عنوان الوحدة">
+                    <button onclick="addNewUnit()" class="w-full mt-2 btn-purple text-white py-2 rounded-lg">
+                        إضافة وحدة ➕
+                    </button>
+                </div>
+                
+                <div>
+                    <label class="block purple-accent font-semibold mb-2">إضافة تمرين:</label>
+                    <select id="unitSelect" class="w-full p-2 border-2 border-purple-300 rounded-lg mb-2">
+                        <option value="">اختر الوحدة</option>
+                    </select>
+                    <input type="text" id="newExercise" class="w-full p-2 border-2 border-purple-300 rounded-lg" placeholder="نص التمرين">
+                    <button onclick="addExercise()" class="w-full mt-2 btn-purple text-white py-2 rounded-lg">
+                        إضافة تمرين ➕
+                    </button>
+                </div>
+                
+                <div>
+                    <label class="block purple-accent font-semibold mb-2">إضافة تعليق:</label>
+                    <textarea id="newComment" class="w-full p-2 border-2 border-purple-300 rounded-lg" rows="3" placeholder="اكتبي تعليقك هنا..."></textarea>
+                    <button onclick="addComment()" class="w-full mt-2 btn-purple text-white py-2 rounded-lg">
+                        إضافة تعليق 💬
+                    </button>
+                </div>
+                
+                <button onclick="closeAdminPanel()" class="w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-600">
+                    إغلاق ❌
+                </button>
+            </div>
+        </div>
+        
+        <!-- المحتوى -->
+        <main class="container mx-auto px-6 py-8">
+            <!-- الوحدات -->
+            <div id="unitsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- الوحدة الأولى -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="1">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">📚</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 1: Greetings & Introductions</h3>
+                        <p class="text-gray-600">التحيات والتعارف</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: Complete the dialogue</p>
+                            <p class="text-sm text-gray-600 mt-1">أكملي الحوار التالي</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: Match greetings with responses</p>
+                            <p class="text-sm text-gray-600 mt-1">اربطي التحيات بالردود المناسبة</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: Write about yourself</p>
+                            <p class="text-sm text-gray-600 mt-1">اكتبي عن نفسك</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(1)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+                
+                <!-- الوحدة الثانية -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="2">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">🏠</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 2: My Family & Home</h3>
+                        <p class="text-gray-600">عائلتي ومنزلي</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: Family tree activity</p>
+                            <p class="text-sm text-gray-600 mt-1">نشاط شجرة العائلة</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: Rooms in the house</p>
+                            <p class="text-sm text-gray-600 mt-1">غرف المنزل</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: Describe your family</p>
+                            <p class="text-sm text-gray-600 mt-1">صفي عائلتك</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(2)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+                
+                <!-- الوحدة الثالثة -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="3">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">🎒</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 3: School Life</h3>
+                        <p class="text-gray-600">الحياة المدرسية</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: School subjects vocabulary</p>
+                            <p class="text-sm text-gray-600 mt-1">مفردات المواد الدراسية</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: My daily schedule</p>
+                            <p class="text-sm text-gray-600 mt-1">جدولي اليومي</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: School rules and activities</p>
+                            <p class="text-sm text-gray-600 mt-1">قوانين وأنشطة المدرسة</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(3)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+                
+                <!-- الوحدة الرابعة -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="4">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">🍎</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 4: Food & Drinks</h3>
+                        <p class="text-gray-600">الطعام والشراب</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: Food vocabulary matching</p>
+                            <p class="text-sm text-gray-600 mt-1">مطابقة مفردات الطعام</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: Healthy vs unhealthy food</p>
+                            <p class="text-sm text-gray-600 mt-1">الطعام الصحي وغير الصحي</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: My favorite meal</p>
+                            <p class="text-sm text-gray-600 mt-1">وجبتي المفضلة</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(4)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+                
+                <!-- الوحدة الخامسة -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="5">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 5: Hobbies & Free Time</h3>
+                        <p class="text-gray-600">الهوايات ووقت الفراغ</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: Hobby vocabulary</p>
+                            <p class="text-sm text-gray-600 mt-1">مفردات الهوايات</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: What do you like doing?</p>
+                            <p class="text-sm text-gray-600 mt-1">ماذا تحبين أن تفعلي؟</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: Weekend activities</p>
+                            <p class="text-sm text-gray-600 mt-1">أنشطة نهاية الأسبوع</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(5)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+                
+                <!-- الوحدة السادسة -->
+                <div class="unit-card card-hover rounded-2xl p-6 shadow-lg" data-unit="6">
+                    <div class="text-center mb-4">
+                        <div class="text-4xl mb-2">🌍</div>
+                        <h3 class="text-xl font-bold purple-accent">Unit 6: Around the World</h3>
+                        <p class="text-gray-600">حول العالم</p>
+                    </div>
+                    
+                    <div class="exercises-container space-y-3">
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 1: Countries and nationalities</p>
+                            <p class="text-sm text-gray-600 mt-1">البلدان والجنسيات</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 2: Famous landmarks</p>
+                            <p class="text-sm text-gray-600 mt-1">المعالم الشهيرة</p>
+                        </div>
+                        
+                        <div class="exercise-item p-3 rounded-lg">
+                            <p class="english-text font-semibold text-purple-700">Exercise 3: My dream destination</p>
+                            <p class="text-sm text-gray-600 mt-1">وجهتي المفضلة للسفر</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openUnit(6)" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                        فتح الوحدة 🌸
+                    </button>
+                </div>
+            </div>
+            
+            <!-- قسم التعليقات -->
+            <div class="mt-12">
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-lg border-2 border-purple-200">
+                    <h3 class="text-2xl font-bold purple-accent mb-4 text-center">💬 التعليقات والملاحظات</h3>
+                    <div id="commentsContainer" class="space-y-3">
+                        <div class="bg-purple-50 p-4 rounded-lg border-r-4 border-purple-400">
+                            <p class="text-gray-700">مرحباً بكن في أوراق العمل التفاعلية! 🌸💜</p>
+                            <small class="text-gray-500">أسماء الحجيلي - اليوم</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // متغيرات عامة
+        let isAdminPanelOpen = false;
+        let unitCounter = 6;
+        
+        // بيانات الدخول الافتراضية - مخزنة في متغير عام
+        window.appCredentials = {
+            username: 'asma_alhujaily',
+            password: 'asma2025',
+            adminCode: 'ASMA_ADMIN2025'
+        };
+        
+        // دالة لحفظ البيانات
+        function saveCredentials(newCreds) {
+            try {
+                // حفظ في localStorage
+                localStorage.setItem('userCredentials', JSON.stringify(newCreds));
+                
+                // تحديث المتغير العام
+                window.appCredentials = { ...newCreds };
+                
+                // التحقق من الحفظ
+                const saved = localStorage.getItem('userCredentials');
+                const parsed = JSON.parse(saved);
+                
+                return (parsed.username === newCreds.username && 
+                        parsed.password === newCreds.password && 
+                        parsed.adminCode === newCreds.adminCode);
+            } catch (e) {
+                return false;
+            }
+        }
+        
+        // دالة لتحميل البيانات
+        function loadCredentials() {
+            try {
+                const saved = localStorage.getItem('userCredentials');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    window.appCredentials = parsed;
+                    return true;
+                }
+            } catch (e) {
+                console.log('خطأ في تحميل البيانات');
+            }
+            return false;
+        }
+        
+        // دالة للحصول على البيانات الحالية
+        function getCurrentCredentials() {
+            return { ...window.appCredentials };
+        }
+        
+        // تحميل البيانات عند بدء الصفحة
+        loadCredentials();
+        
+        // دالة التشخيص
+        function debugLog(message) {
+            const debugArea = document.getElementById('debugArea');
+            const debugLogDiv = document.getElementById('debugLog');
+            
+            debugArea.classList.remove('hidden');
+            
+            const timestamp = new Date().toLocaleTimeString();
+            debugLogDiv.innerHTML += `[${timestamp}] ${message}\n`;
+            debugLogDiv.scrollTop = debugLogDiv.scrollHeight;
+        }
+        
+        // عرض البيانات الحالية
+        function showCurrentCredentials() {
+            const current = getCurrentCredentials();
+            debugLog(`عرض البيانات الحالية: ${JSON.stringify(current)}`);
+            
+            alert('📋 البيانات الحالية:\n\n' +
+                  '🔑 اسم المستخدم: ' + current.username + '\n' +
+                  '🔒 كلمة المرور: ' + current.password + '\n' +
+                  '🎛️ رقم سري لوحة التحكم: ' + current.adminCode + '\n\n' +
+                  'استخدمي هذه البيانات في الحقول المطلوبة');
+        }
+        
+        // ملء البيانات الحالية تلقائياً
+        function fillCurrentCredentials() {
+            const current = getCurrentCredentials();
+            debugLog(`ملء البيانات تلقائياً: ${JSON.stringify(current)}`);
+            
+            document.getElementById('currentUsername').value = current.username;
+            document.getElementById('currentPassword').value = current.password;
+            alert('✅ تم ملء البيانات الحالية تلقائياً!\nالآن أدخلي البيانات الجديدة التي تريدينها');
+        }
+        
+        // تسجيل الدخول
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const current = getCurrentCredentials();
+            
+            if (username === current.username && password === current.password) {
+                document.getElementById('loginOverlay').classList.add('hidden');
+                document.getElementById('mainContent').classList.remove('hidden');
+                updateUnitSelect();
+                createSparkles();
+            } else {
+                alert('❌ اسم المستخدم أو كلمة المرور غير صحيحة!');
+            }
+        }
+        
+        // تغيير بيانات الدخول - النسخة المحسنة مع شرح مفصل
+        function changeCredentials() {
+            debugLog('🚀 بدء عملية تغيير البيانات...');
+            
+            // الحصول على القيم
+            const currentUsername = document.getElementById('currentUsername').value.trim();
+            const currentPassword = document.getElementById('currentPassword').value.trim();
+            const newUsername = document.getElementById('newUsername').value.trim();
+            const newPassword = document.getElementById('newPassword').value.trim();
+            const newAdminCode = document.getElementById('newAdminCode').value.trim();
+            
+            const currentCreds = getCurrentCredentials();
+            
+            debugLog(`📝 البيانات المدخلة: current_user="${currentUsername}", new_user="${newUsername}"`);
+            debugLog(`💾 البيانات المحفوظة حالياً: ${JSON.stringify(currentCreds)}`);
+            
+            // التحقق من أن جميع الحقول مملوءة
+            if (!currentUsername || !currentPassword || !newUsername || !newPassword || !newAdminCode) {
+                debugLog('❌ خطأ: حقول فارغة');
+                alert('⚠️ خطوات تغيير البيانات:\n\n' +
+                      '1️⃣ املئي البيانات الحالية (أو اضغطي "ملء تلقائي")\n' +
+                      '2️⃣ املئي البيانات الجديدة التي تريدينها\n' +
+                      '3️⃣ اضغطي "تغيير بيانات الدخول"\n' +
+                      '4️⃣ وافقي على التأكيد\n\n' +
+                      '❗ جميع الحقول مطلوبة!');
+                return;
+            }
+            
+            // التحقق من البيانات الحالية
+            if (currentUsername !== currentCreds.username || currentPassword !== currentCreds.password) {
+                debugLog(`❌ خطأ في التحقق: expected="${currentCreds.username}" got="${currentUsername}"`);
+                alert('❌ البيانات الحالية غير صحيحة!\n\n' +
+                      '💡 نصيحة: اضغطي على "ملء البيانات الحالية تلقائياً"\n\n' +
+                      'أو أدخلي البيانات الصحيحة:\n' +
+                      '🔑 اسم المستخدم: ' + currentCreds.username + '\n' +
+                      '🔒 كلمة المرور: ' + currentCreds.password);
+                return;
+            }
+            
+            // التحقق من طول البيانات الجديدة
+            if (newUsername.length < 3 || newPassword.length < 3 || newAdminCode.length < 3) {
+                debugLog('❌ خطأ: البيانات الجديدة قصيرة جداً');
+                alert('⚠️ يجب أن تكون جميع البيانات الجديدة 3 أحرف على الأقل\n\n' +
+                      '📏 الطول الحالي:\n' +
+                      '• اسم المستخدم الجديد: ' + newUsername.length + ' أحرف\n' +
+                      '• كلمة المرور الجديدة: ' + newPassword.length + ' أحرف\n' +
+                      '• الرقم السري الجديد: ' + newAdminCode.length + ' أحرف');
+                return;
+            }
+            
+            debugLog('✅ جميع البيانات صحيحة، عرض نافذة التأكيد...');
+            
+            // إنشاء نافذة تأكيد مخصصة بدلاً من confirm العادية
+            showCustomConfirmation(currentCreds, {
+                username: newUsername,
+                password: newPassword,
+                adminCode: newAdminCode
+            });
+            
+        }
+        
+        // نافذة التأكيد المخصصة
+        function showCustomConfirmation(currentCreds, newCreds) {
+            debugLog('🎨 إنشاء نافذة التأكيد المخصصة...');
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            overlay.id = 'confirmationOverlay';
+            
+            overlay.innerHTML = `
+                <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 text-center shadow-2xl border-4 border-purple-300">
+                    <div class="mb-6">
+                        <div class="text-6xl mb-4">🔐</div>
+                        <h2 class="text-2xl font-bold purple-accent mb-2">تأكيد تغيير البيانات</h2>
+                        <p class="text-gray-600">تأكدي من صحة البيانات قبل الحفظ</p>
+                    </div>
+                    
+                    <div class="space-y-6 text-right">
+                        <!-- البيانات الحالية -->
+                        <div class="bg-red-50 border-2 border-red-200 rounded-xl p-4">
+                            <h3 class="text-lg font-bold text-red-700 mb-3 text-center">📋 البيانات الحالية (ستُحذف)</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">اسم المستخدم:</span>
+                                    <span class="english-text">${currentCreds.username}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">كلمة المرور:</span>
+                                    <span class="english-text">${currentCreds.password}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">رقم سري لوحة التحكم:</span>
+                                    <span class="english-text">${currentCreds.adminCode}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- البيانات الجديدة -->
+                        <div class="bg-green-50 border-2 border-green-200 rounded-xl p-4">
+                            <h3 class="text-lg font-bold text-green-700 mb-3 text-center">✨ البيانات الجديدة (ستُحفظ)</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">اسم المستخدم:</span>
+                                    <span class="english-text font-bold text-green-700">${newCreds.username}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">كلمة المرور:</span>
+                                    <span class="english-text font-bold text-green-700">${newCreds.password}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">رقم سري لوحة التحكم:</span>
+                                    <span class="english-text font-bold text-green-700">${newCreds.adminCode}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- تحذير -->
+                        <div class="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-4">
+                            <div class="text-yellow-700 font-bold text-center">
+                                ⚠️ تحذير مهم ⚠️<br>
+                                <span class="text-sm font-normal">هذا التغيير لا يمكن التراجع عنه!<br>
+                                ستحتاجين للبيانات الجديدة لتسجيل الدخول مرة أخرى</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-8">
+                        <button onclick="confirmCredentialChange()" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-bold text-lg transition-all">
+                            ✅ موافق - احفظ الآن
+                        </button>
+                        <button onclick="cancelCredentialChange()" class="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl font-bold text-lg transition-all">
+                            ❌ إلغاء
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(overlay);
+            debugLog('✅ تم إنشاء نافذة التأكيد بنجاح');
+        }
+        
+        // تأكيد تغيير البيانات
+        function confirmCredentialChange() {
+            debugLog('✅ المستخدم وافق على التغيير، بدء عملية الحفظ...');
+            
+            // إغلاق نافذة التأكيد
+            const overlay = document.getElementById('confirmationOverlay');
+            if (overlay) overlay.remove();
+            
+            // الحصول على البيانات الجديدة من الحقول
+            const newCredentials = {
+                username: document.getElementById('newUsername').value.trim(),
+                password: document.getElementById('newPassword').value.trim(),
+                adminCode: document.getElementById('newAdminCode').value.trim()
+            };
+            
+            debugLog(`💾 محاولة حفظ البيانات الجديدة: ${JSON.stringify(newCredentials)}`);
+            
+            // حفظ البيانات
+            const saveSuccess = saveCredentials(newCredentials);
+            
+            if (saveSuccess) {
+                debugLog('🎉 تم حفظ البيانات بنجاح في localStorage والمتغير العام');
+                
+                // التحقق من الحفظ
+                const verification = getCurrentCredentials();
+                debugLog(`🔍 التحقق من الحفظ: ${JSON.stringify(verification)}`);
+                
+                // مسح الحقول
+                document.getElementById('currentUsername').value = '';
+                document.getElementById('currentPassword').value = '';
+                document.getElementById('newUsername').value = '';
+                document.getElementById('newPassword').value = '';
+                document.getElementById('newAdminCode').value = '';
+                
+                debugLog('🧹 تم مسح جميع الحقول');
+                
+                // عرض رسالة نجاح مخصصة
+                showSuccessMessage(newCredentials);
+                
+            } else {
+                debugLog('❌ فشل في حفظ البيانات');
+                alert('❌ حدث خطأ في حفظ البيانات الجديدة!\n\n' +
+                      '🔧 الأسباب المحتملة:\n' +
+                      '• مشكلة في localStorage\n' +
+                      '• خطأ في تنسيق البيانات\n\n' +
+                      '💡 يرجى المحاولة مرة أخرى');
+            }
+        }
+        
+        // إلغاء تغيير البيانات
+        function cancelCredentialChange() {
+            debugLog('❌ المستخدم ألغى العملية');
+            
+            const overlay = document.getElementById('confirmationOverlay');
+            if (overlay) overlay.remove();
+            
+            alert('❌ تم إلغاء عملية تغيير البيانات\n\nلم يتم حفظ أي تغييرات');
+        }
+        
+        // عرض رسالة النجاح
+        function showSuccessMessage(newCreds) {
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            
+            overlay.innerHTML = `
+                <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 text-center shadow-2xl border-4 border-green-300">
+                    <div class="mb-6">
+                        <div class="text-6xl mb-4">🎉</div>
+                        <h2 class="text-2xl font-bold text-green-600 mb-2">تم الحفظ بنجاح!</h2>
+                        <p class="text-gray-600">تم تغيير بيانات الدخول بنجاح</p>
+                    </div>
+                    
+                    <div class="bg-green-50 border-2 border-green-200 rounded-xl p-4 mb-6 text-right">
+                        <h3 class="text-lg font-bold text-green-700 mb-3 text-center">✅ البيانات الجديدة المحفوظة</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="font-semibold">اسم المستخدم:</span>
+                                <span class="english-text font-bold text-green-700">${newCreds.username}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">كلمة المرور:</span>
+                                <span class="english-text font-bold text-green-700">${newCreds.password}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">رقم سري لوحة التحكم:</span>
+                                <span class="english-text font-bold text-green-700">${newCreds.adminCode}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-6">
+                        <div class="text-blue-700 font-bold text-center">
+                            🔄 سيتم تسجيل خروجك الآن<br>
+                            <span class="text-sm font-normal">استخدمي البيانات الجديدة لتسجيل الدخول مرة أخرى</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="proceedToLogout()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl font-bold text-lg transition-all">
+                        متابعة 🚪
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(overlay);
+            debugLog('✅ تم عرض رسالة النجاح');
+        }
+        
+        // المتابعة لتسجيل الخروج
+        function proceedToLogout() {
+            debugLog('🚪 بدء عملية تسجيل الخروج...');
+            
+            // إزالة رسالة النجاح
+            const overlay = document.querySelector('.fixed.inset-0');
+            if (overlay) overlay.remove();
+            
+            // إغلاق لوحة التحكم وتسجيل الخروج
+            closeAdminPanel();
+            setTimeout(() => {
+                logout();
+                debugLog('✅ تم تسجيل الخروج بنجاح');
+            }, 1000);
+        }
+        
+        // تسجيل الخروج
+        function logout() {
+            document.getElementById('mainContent').classList.add('hidden');
+            document.getElementById('loginOverlay').classList.remove('hidden');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            
+            if (isAdminPanelOpen) {
+                toggleAdminPanel();
+            }
+        }
+        
+        // إنشاء مؤثرات الشرارات
+        function createSparkles() {
+            const container = document.querySelector('.floating-hearts');
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(sparkle);
+            }
+        }
+        
+        // تبديل لوحة التحكم
+        function toggleAdminPanel() {
+            if (!isAdminPanelOpen) {
+                showAdminLogin();
+            } else {
+                closeAdminPanel();
+            }
+        }
+        
+        // عرض نافذة تسجيل دخول لوحة التحكم
+        function showAdminLogin() {
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 login-overlay flex items-center justify-center z-50';
+            overlay.id = 'adminLoginOverlay';
+            
+            overlay.innerHTML = `
+                <div class="login-card rounded-3xl p-8 max-w-md w-full mx-4 text-center">
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-bold text-purple-600 mb-2">🔐 لوحة التحكم</h2>
+                        <p class="text-gray-600">أدخلي الرقم السري للوصول إلى لوحة التحكم</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-right text-purple-600 font-semibold mb-2">رقم سري لوحة التحكم:</label>
+                            <input type="password" id="adminLoginCode" class="w-full p-3 border-2 border-purple-300 rounded-xl text-center english-text focus:border-purple-500" placeholder="Enter Admin Code">
+                        </div>
+                        
+                        <button onclick="loginAdmin()" class="w-full btn-purple text-white py-3 rounded-xl font-semibold text-lg">
+                            دخول لوحة التحكم 🎛️
+                        </button>
+                        
+                        <button onclick="closeAdminLogin()" class="w-full bg-gray-500 text-white py-2 rounded-xl font-semibold hover:bg-gray-600">
+                            إلغاء ❌
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(overlay);
+            setTimeout(() => document.getElementById('adminLoginCode').focus(), 100);
+        }
+        
+        // تسجيل دخول لوحة التحكم
+        function loginAdmin() {
+            const adminCode = document.getElementById('adminLoginCode').value;
+            const current = getCurrentCredentials();
+            
+            if (adminCode === current.adminCode) {
+                closeAdminLogin();
+                openAdminPanel();
+            } else {
+                alert('❌ الرقم السري للوحة التحكم غير صحيح!\nالرقم الصحيح هو: ' + current.adminCode);
+                document.getElementById('adminLoginCode').value = '';
+                document.getElementById('adminLoginCode').focus();
+            }
+        }
+        
+        // إغلاق نافذة تسجيل دخول لوحة التحكم
+        function closeAdminLogin() {
+            const overlay = document.getElementById('adminLoginOverlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+        
+        // فتح لوحة التحكم
+        function openAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            isAdminPanelOpen = true;
+            panel.classList.remove('hidden');
+            panel.style.animation = 'slideIn 0.3s ease-out';
+        }
+        
+        // إغلاق لوحة التحكم
+        function closeAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            isAdminPanelOpen = false;
+            panel.style.animation = 'slideOut 0.3s ease-out';
+            setTimeout(() => panel.classList.add('hidden'), 300);
+            
+            // إخفاء منطقة التشخيص
+            document.getElementById('debugArea').classList.add('hidden');
+            document.getElementById('debugLog').innerHTML = '';
+        }
+        
+        // تحديث قائمة الوحدات في لوحة التحكم
+        function updateUnitSelect() {
+            const select = document.getElementById('unitSelect');
+            select.innerHTML = '<option value="">اختر الوحدة</option>';
+            
+            const units = document.querySelectorAll('[data-unit]');
+            units.forEach(unit => {
+                const unitNum = unit.dataset.unit;
+                const title = unit.querySelector('h3').textContent;
+                const option = document.createElement('option');
+                option.value = unitNum;
+                option.textContent = `الوحدة ${unitNum}: ${title}`;
+                select.appendChild(option);
+            });
+        }
+        
+        // إضافة وحدة جديدة
+        function addNewUnit() {
+            const title = document.getElementById('newUnitTitle').value.trim();
+            if (!title) {
+                alert('⚠️ يرجى إدخال عنوان الوحدة');
+                return;
+            }
+            
+            unitCounter++;
+            const container = document.getElementById('unitsContainer');
+            
+            const newUnit = document.createElement('div');
+            newUnit.className = 'unit-card card-hover rounded-2xl p-6 shadow-lg';
+            newUnit.dataset.unit = unitCounter;
+            
+            newUnit.innerHTML = `
+                <div class="text-center mb-4">
+                    <div class="text-4xl mb-2">📝</div>
+                    <h3 class="text-xl font-bold purple-accent">${title}</h3>
+                    <p class="text-gray-600">وحدة جديدة</p>
+                </div>
+                
+                <div class="exercises-container space-y-3">
+                    <div class="exercise-item p-3 rounded-lg">
+                        <p class="english-text font-semibold text-purple-700">Exercise 1: New exercise</p>
+                        <p class="text-sm text-gray-600 mt-1">تمرين جديد</p>
+                    </div>
+                </div>
+                
+                <button onclick="openUnit(${unitCounter})" class="w-full mt-4 btn-pink-purple text-white py-2 rounded-lg font-semibold">
+                    فتح الوحدة 🌸
+                </button>
+            `;
+            
+            container.appendChild(newUnit);
+            document.getElementById('newUnitTitle').value = '';
+            updateUnitSelect();
+            
+            newUnit.style.animation = 'fadeInUp 0.5s ease-out';
+            alert('✅ تم إضافة الوحدة بنجاح!');
+        }
+        
+        // إضافة تمرين جديد
+        function addExercise() {
+            const unitNum = document.getElementById('unitSelect').value;
+            const exerciseText = document.getElementById('newExercise').value.trim();
+            
+            if (!unitNum || !exerciseText) {
+                alert('⚠️ يرجى اختيار الوحدة وإدخال نص التمرين');
+                return;
+            }
+            
+            const unit = document.querySelector(`[data-unit="${unitNum}"]`);
+            const exercisesContainer = unit.querySelector('.exercises-container');
+            
+            const newExercise = document.createElement('div');
+            newExercise.className = 'exercise-item p-3 rounded-lg';
+            newExercise.innerHTML = `
+                <p class="english-text font-semibold text-purple-700">${exerciseText}</p>
+                <p class="text-sm text-gray-600 mt-1">تمرين جديد</p>
+            `;
+            
+            exercisesContainer.appendChild(newExercise);
+            document.getElementById('newExercise').value = '';
+            
+            newExercise.style.animation = 'slideInRight 0.5s ease-out';
+            alert('✅ تم إضافة التمرين بنجاح!');
+        }
+        
+        // إضافة تعليق
+        function addComment() {
+            const commentText = document.getElementById('newComment').value.trim();
+            if (!commentText) {
+                alert('⚠️ يرجى إدخال نص التعليق');
+                return;
+            }
+            
+            const container = document.getElementById('commentsContainer');
+            const newComment = document.createElement('div');
+            newComment.className = 'bg-purple-50 p-4 rounded-lg border-r-4 border-purple-400';
+            
+            const now = new Date();
+            const timeString = now.toLocaleString('ar-SA');
+            
+            newComment.innerHTML = `
+                <p class="text-gray-700">${commentText}</p>
+                <small class="text-gray-500">أسماء الحجيلي - ${timeString}</small>
+            `;
+            
+            container.appendChild(newComment);
+            document.getElementById('newComment').value = '';
+            
+            newComment.style.animation = 'fadeInLeft 0.5s ease-out';
+            alert('✅ تم إضافة التعليق بنجاح!');
+        }
+        
+        // فتح الوحدة
+        function openUnit(unitNum) {
+            const unitData = {
+                1: {
+                    title: "Unit 1: Greetings & Introductions",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match the greetings with their responses:",
+                            pairs: [
+                                ["Hello!", "Hi there!"],
+                                ["Good morning!", "Good morning to you too!"],
+                                ["How are you?", "I'm fine, thank you!"],
+                                ["Nice to meet you!", "Nice to meet you too!"]
+                            ]
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete the dialogue:",
+                            text: "A: Hello! My name is Sarah. What's _____ name?\nB: Hi Sarah! My name _____ Ahmed. _____ to meet you!\nA: Nice to _____ you too!",
+                            answers: ["your", "is", "Nice", "meet"]
+                        },
+                        {
+                            type: "quiz",
+                            question: "Choose the correct greeting for the morning:",
+                            options: ["Good night", "Good morning", "Good evening", "Good afternoon"],
+                            correct: 1
+                        }
+                    ]
+                },
+                2: {
+                    title: "Unit 2: My Family & Home",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match family members with their Arabic meanings:",
+                            pairs: [
+                                ["Father", "أب"],
+                                ["Mother", "أم"],
+                                ["Brother", "أخ"],
+                                ["Sister", "أخت"]
+                            ]
+                        },
+                        {
+                            type: "quiz",
+                            question: "Where do you sleep?",
+                            options: ["Kitchen", "Bedroom", "Bathroom", "Living room"],
+                            correct: 1
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete the sentences about family:",
+                            text: "I have a big _____. My _____ is a teacher and my _____ is a doctor. I have one _____ and two _____.",
+                            answers: ["family", "father", "mother", "brother", "sisters"]
+                        }
+                    ]
+                },
+                3: {
+                    title: "Unit 3: School Life",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match school subjects:",
+                            pairs: [
+                                ["Math", "رياضيات"],
+                                ["Science", "علوم"],
+                                ["English", "إنجليزي"],
+                                ["Art", "فنون"]
+                            ]
+                        },
+                        {
+                            type: "quiz",
+                            question: "What do you use to write?",
+                            options: ["Book", "Pen", "Chair", "Window"],
+                            correct: 1
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete about your school day:",
+                            text: "I go to _____ every day. My favorite _____ is English. I have _____ at 12 o'clock.",
+                            answers: ["school", "subject", "lunch"]
+                        }
+                    ]
+                },
+                4: {
+                    title: "Unit 4: Food & Drinks",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match food items:",
+                            pairs: [
+                                ["Apple", "تفاحة"],
+                                ["Bread", "خبز"],
+                                ["Water", "ماء"],
+                                ["Milk", "حليب"]
+                            ]
+                        },
+                        {
+                            type: "quiz",
+                            question: "Which is a healthy food?",
+                            options: ["Candy", "Apple", "Chips", "Soda"],
+                            correct: 1
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete about meals:",
+                            text: "I eat _____ in the morning. For lunch, I have _____ and vegetables. I drink _____ with my meals.",
+                            answers: ["breakfast", "rice", "water"]
+                        }
+                    ]
+                },
+                5: {
+                    title: "Unit 5: Hobbies & Free Time",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match hobbies:",
+                            pairs: [
+                                ["Reading", "قراءة"],
+                                ["Swimming", "سباحة"],
+                                ["Drawing", "رسم"],
+                                ["Singing", "غناء"]
+                            ]
+                        },
+                        {
+                            type: "quiz",
+                            question: "What do you need for reading?",
+                            options: ["Ball", "Book", "Brush", "Bike"],
+                            correct: 1
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete about hobbies:",
+                            text: "My favorite _____ is reading. I like to _____ books in my free time. On weekends, I _____ with my friends.",
+                            answers: ["hobby", "read", "play"]
+                        }
+                    ]
+                },
+                6: {
+                    title: "Unit 6: Around the World",
+                    activities: [
+                        {
+                            type: "matching",
+                            question: "Match countries with capitals:",
+                            pairs: [
+                                ["Egypt", "Cairo"],
+                                ["France", "Paris"],
+                                ["Japan", "Tokyo"],
+                                ["USA", "Washington"]
+                            ]
+                        },
+                        {
+                            type: "quiz",
+                            question: "Which is a famous landmark in Egypt?",
+                            options: ["Eiffel Tower", "Pyramids", "Big Ben", "Statue of Liberty"],
+                            correct: 1
+                        },
+                        {
+                            type: "fillblanks",
+                            question: "Complete about countries:",
+                            text: "I live in Saudi _____. The capital is _____. I would like to visit _____ one day.",
+                            answers: ["Arabia", "Riyadh", "Egypt"]
+                        }
+                    ]
+                }
+            };
+            
+            showUnitActivities(unitData[unitNum]);
+        }
+        
+        // عرض أنشطة الوحدة
+        function showUnitActivities(unit) {
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            overlay.id = 'unitOverlay';
+            
+            const modal = document.createElement('div');
+            modal.className = 'bg-white rounded-3xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
+            modal.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold purple-accent">${unit.title}</h2>
+                    <button onclick="closeUnitModal()" class="text-gray-500 hover:text-purple-600 text-2xl">❌</button>
+                </div>
+                
+                <div id="activitiesContainer" class="space-y-6">
+                    ${unit.activities.map((activity, index) => createActivityHTML(activity, index)).join('')}
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <button onclick="checkAllAnswers()" class="btn-pink-purple text-white px-8 py-3 rounded-xl font-semibold text-lg">
+                        تحقق من الإجابات ✨
+                    </button>
+                </div>
+                
+                <div id="resultsContainer" class="mt-6 hidden">
+                    <div class="bg-purple-50 rounded-2xl p-6 text-center">
+                        <h3 class="text-xl font-bold purple-accent mb-2">🎉 النتائج</h3>
+                        <div id="scoreDisplay" class="text-lg"></div>
+                        <div id="encouragement" class="purple-accent font-semibold mt-2"></div>
+                    </div>
+                </div>
+            `;
+            
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+        }
+        
+        // إنشاء HTML للنشاط
+        function createActivityHTML(activity, index) {
+            switch(activity.type) {
+                case 'matching':
+                    return `
+                        <div class="activity-card bg-gradient-to-r from-purple-50 to-white rounded-2xl p-6 border-2 border-purple-200">
+                            <h3 class="text-lg font-bold purple-accent mb-4">النشاط ${index + 1}: ${activity.question}</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <h4 class="font-semibold text-gray-700">اسحبي من هنا:</h4>
+                                    ${activity.pairs.map((pair, i) => `
+                                        <div class="draggable bg-purple-100 p-3 rounded-lg cursor-move border-2 border-purple-300 hover:bg-purple-200 transition-all" 
+                                             draggable="true" data-value="${pair[0]}" data-activity="${index}">
+                                            ${pair[0]}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-semibold text-gray-700">أسقطي هنا:</h4>
+                                    ${activity.pairs.map((pair, i) => `
+                                        <div class="drop-zone bg-gray-100 p-3 rounded-lg border-2 border-dashed border-gray-300 min-h-[50px] flex items-center justify-between" 
+                                             data-answer="${pair[0]}" data-activity="${index}">
+                                            <span class="text-gray-600">${pair[1]}</span>
+                                            <div class="dropped-item"></div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                case 'fillblanks':
+                    return `
+                        <div class="activity-card bg-gradient-to-r from-purple-50 to-white rounded-2xl p-6 border-2 border-purple-200">
+                            <h3 class="text-lg font-bold purple-accent mb-4">النشاط ${index + 1}: ${activity.question}</h3>
+                            <div class="bg-white p-4 rounded-lg border border-purple-200 english-text text-lg leading-relaxed">
+                                ${activity.text.split('____').map((part, i) => 
+                                    i < activity.answers.length ? 
+                                    `${part}<input type="text" class="fill-blank inline-block w-24 mx-1 px-2 py-1 border-b-2 border-purple-300 focus:border-purple-500 text-center" data-activity="${index}" data-answer="${activity.answers[i]}">` :
+                                    part
+                                ).join('')}
+                            </div>
+                        </div>
+                    `;
+                    
+                case 'quiz':
+                    return `
+                        <div class="activity-card bg-gradient-to-r from-purple-50 to-white rounded-2xl p-6 border-2 border-purple-200">
+                            <h3 class="text-lg font-bold purple-accent mb-4">النشاط ${index + 1}: ${activity.question}</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                ${activity.options.map((option, i) => `
+                                    <button class="quiz-option p-3 bg-white border-2 border-purple-200 rounded-lg hover:bg-purple-100 hover:border-purple-400 transition-all english-text" 
+                                            data-activity="${index}" data-option="${i}" onclick="selectQuizOption(this, ${i}, ${activity.correct})">
+                                        ${option}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+            }
+        }
+        
+        // اختيار إجابة الاختيار من متعدد
+        function selectQuizOption(button, selected, correct) {
+            const activity = button.dataset.activity;
+            const siblings = button.parentElement.querySelectorAll('.quiz-option');
+            
+            siblings.forEach(sib => {
+                sib.classList.remove('bg-purple-200', 'border-purple-500');
+                sib.classList.add('bg-white', 'border-purple-200');
+            });
+            
+            button.classList.remove('bg-white', 'border-purple-200');
+            button.classList.add('bg-purple-200', 'border-purple-500');
+            
+            button.dataset.selected = selected;
+        }
+        
+        // إغلاق نافذة الوحدة
+        function closeUnitModal() {
+            const overlay = document.getElementById('unitOverlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+        
+        // تحقق من جميع الإجابات
+        function checkAllAnswers() {
+            let totalQuestions = 0;
+            let correctAnswers = 0;
+            
+            // تحقق من أنشطة المطابقة
+            const dropZones = document.querySelectorAll('.drop-zone');
+            dropZones.forEach(zone => {
+                totalQuestions++;
+                const droppedItem = zone.querySelector('.dropped-item');
+                if (droppedItem && droppedItem.textContent === zone.dataset.answer) {
+                    correctAnswers++;
+                    zone.classList.add('bg-green-100', 'border-green-400');
+                } else {
+                    zone.classList.add('bg-red-100', 'border-red-400');
+                }
+            });
+            
+            // تحقق من ملء الفراغات
+            const fillBlanks = document.querySelectorAll('.fill-blank');
+            fillBlanks.forEach(blank => {
+                totalQuestions++;
+                if (blank.value.toLowerCase().trim() === blank.dataset.answer.toLowerCase()) {
+                    correctAnswers++;
+                    blank.classList.add('border-green-500', 'bg-green-50');
+                } else {
+                    blank.classList.add('border-red-500', 'bg-red-50');
+                }
+            });
+            
+            // تحقق من الاختيار من متعدد
+            const quizOptions = document.querySelectorAll('.quiz-option[data-selected]');
+            const quizActivities = new Set();
+            quizOptions.forEach(option => {
+                const activity = option.dataset.activity;
+                if (!quizActivities.has(activity)) {
+                    quizActivities.add(activity);
+                    totalQuestions++;
+                    const selected = parseInt(option.dataset.selected);
+                    
+                    if (option.classList.contains('bg-purple-200')) {
+                        correctAnswers++;
+                        option.classList.add('bg-green-200', 'border-green-500');
+                    }
+                }
+            });
+            
+            // عرض النتائج
+            const resultsContainer = document.getElementById('resultsContainer');
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const encouragement = document.getElementById('encouragement');
+            
+            const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            scoreDisplay.textContent = `${correctAnswers} من ${totalQuestions} (${percentage}%)`;
+            
+            if (percentage >= 90) {
+                encouragement.textContent = "ممتاز! أداء رائع! 🌟💜";
+                encouragement.className = "text-green-600 font-semibold mt-2";
+            } else if (percentage >= 70) {
+                encouragement.textContent = "جيد جداً! استمري! 👏💜";
+                encouragement.className = "text-blue-600 font-semibold mt-2";
+            } else if (percentage >= 50) {
+                encouragement.textContent = "جيد! يمكنك التحسن أكثر! 💪💜";
+                encouragement.className = "text-yellow-600 font-semibold mt-2";
+            } else {
+                encouragement.textContent = "تحتاجين لمزيد من المراجعة! 📚💜";
+                encouragement.className = "text-red-600 font-semibold mt-2";
+            }
+            
+            resultsContainer.classList.remove('hidden');
+            resultsContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // إضافة وظائف السحب والإفلات
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.classList.contains('draggable')) {
+                e.dataTransfer.setData('text/plain', e.target.dataset.value);
+                e.target.style.opacity = '0.5';
+            }
+        });
+        
+        document.addEventListener('dragend', function(e) {
+            if (e.target.classList.contains('draggable')) {
+                e.target.style.opacity = '1';
+            }
+        });
+        
+        document.addEventListener('dragover', function(e) {
+            if (e.target.classList.contains('drop-zone')) {
+                e.preventDefault();
+                e.target.classList.add('bg-purple-100', 'border-purple-400');
+            }
+        });
+        
+        document.addEventListener('dragleave', function(e) {
+            if (e.target.classList.contains('drop-zone')) {
+                e.target.classList.remove('bg-purple-100', 'border-purple-400');
+            }
+        });
+        
+        document.addEventListener('drop', function(e) {
+            if (e.target.classList.contains('drop-zone')) {
+                e.preventDefault();
+                const data = e.dataTransfer.getData('text/plain');
+                const droppedItem = e.target.querySelector('.dropped-item');
+                droppedItem.textContent = data;
+                droppedItem.className = 'dropped-item bg-purple-200 px-2 py-1 rounded text-sm';
+                e.target.classList.remove('bg-purple-100', 'border-purple-400');
+            }
+        });
+        
+        // إضافة الأنيميشن CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(-100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(-100%); opacity: 0; }
+            }
+            
+            @keyframes fadeInUp {
+                from { transform: translateY(30px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            
+            @keyframes slideInRight {
+                from { transform: translateX(30px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes fadeInLeft {
+                from { transform: translateX(-30px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // السماح بالدخول بالضغط على Enter
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                if (!document.getElementById('loginOverlay').classList.contains('hidden')) {
+                    login();
+                } else if (document.getElementById('adminLoginOverlay')) {
+                    loginAdmin();
+                }
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96adf9daa33f78b3',t:'MTc1NDQ3NzQ1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
